@@ -5,6 +5,9 @@ import static org.junit.Assert.*;
 
 public class DefinitionTest {
 
+  @Rule
+  public ClearRule clearRule = new ClearRule();
+
   @Test
   public void Definition_instantiatesCorrectly_true() {
     Definition testDefinition = new Definition("Bird");

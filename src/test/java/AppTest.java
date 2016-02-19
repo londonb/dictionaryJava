@@ -16,6 +16,8 @@ public class AppTest extends FluentTest {
   public WebDriver getDefaultDriver() {
       return webDriver;
   }
+  @Rule
+  public ClearRule clearRule = new ClearRule();
 
   @ClassRule
   public static ServerRule server = new ServerRule();
