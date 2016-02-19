@@ -30,4 +30,11 @@ public class WordTest {
     Word testWord = new Word("Bird");
     assertEquals(Word.find(testWord.getId()), testWord);
   }
+
+  @Test
+  public void clear_removesAllWordInstancesFromMemory() {
+    Word testWord = new Word("Bird");
+    Word.clear();
+    assertEquals(Word.all().size(), 0);
+  }
 }
