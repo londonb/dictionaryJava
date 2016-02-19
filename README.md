@@ -1,10 +1,11 @@
-# Title
+#  Short Term Dictionary
 
-#### Description and Date
+#### February 19, 2016
 
-#### Authors
+#### Brad London
 
 ## Description
+This app will allow you to enter in a word, save it, and then add a definition. There is also a the ability to add more definitions to the word if needed.
 
 ## Setup/Installation Requirements
 
