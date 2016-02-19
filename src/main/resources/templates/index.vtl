@@ -4,3 +4,9 @@
 
 <a href="/words">View All Words</a>
 <a href="/words/new">Add a New Word</a>
+
+<hr>
+<h2>All the words in your Dictionary:</h2>
+#foreach($word in $allWords)
+ <h3><a href="/words/$word.getId()">$word.getNameOfWord()</a></h3>
+#end

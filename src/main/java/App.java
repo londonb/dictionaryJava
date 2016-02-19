@@ -11,6 +11,7 @@ public class App {
 
     get("/", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
+      model.put("allWords", Word.all());
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -25,8 +26,11 @@ public class App {
       HashMap<String, Object> model = new HashMap<String, Object>();
       String wordInput = request.queryParams("wordInput");
       Word newWord = new Word(wordInput);
+      request.session().attribute("words", newWord);
       model.put("word", newWord);
-      model.put("template", "templates/success.vtl");
+      model.put("allWords", Word.all());
+      model.put("template", "templates/index.vtl");
+
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
