@@ -25,4 +25,9 @@ public class DefinitionTest {
     assertTrue(Definition.all().contains(secondDefinition));
   }
 
+  @Test
+  public void newId_tasksInstantiateWithAnID_true() {
+    Definition testDefinition = new Definition("A definition");
+    assertEquals(Definition.all().size(), testDefinition.getId());
+  }
 }
