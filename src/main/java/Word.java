@@ -7,6 +7,7 @@ public class Word {
 
   public Word(String nameOfWord) {
     mNameOfWord = nameOfWord;
+    instances.add(this);
   }
 
   public String getNameOfWord() {

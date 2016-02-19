@@ -17,5 +17,11 @@ public class WordTest {
     assertEquals("Bird", testWord.getNameOfWord());
   }
 
-
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word firstWord = new Word("Bird");
+    Word secondWord = new Word("Dog");
+    assertTrue(Word.all().contains(firstWord));
+    assertTrue(Word.all().contains(secondWord));
+  }
 }
