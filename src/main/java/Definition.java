@@ -7,6 +7,7 @@ public class Definition {
 
   public Definition(String wordDefinition) {
     mWordDefinition = wordDefinition;
+    instances.add(this);
   }
 
   public String getDefinitionOfWord() {

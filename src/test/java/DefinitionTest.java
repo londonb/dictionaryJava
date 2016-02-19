@@ -17,5 +17,12 @@ public class DefinitionTest {
     assertEquals("A definition", testDefinition.getDefinitionOfWord());
   }
 
+  @Test
+  public void all_returnsAllInstancesOfDefinition_true() {
+    Definition firstDefinition = new Definition("A definition");
+    Definition secondDefinition = new Definition("Another definition");
+    assertTrue(Definition.all().contains(firstDefinition));
+    assertTrue(Definition.all().contains(secondDefinition));
+  }
 
 }
