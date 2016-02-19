@@ -17,4 +17,5 @@ public class WordTest {
     assertEquals("Bird", testWord.getNameOfWord());
   }
 
+
 }
