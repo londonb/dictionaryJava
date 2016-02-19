@@ -29,7 +29,7 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void wordIsCreatedTest() {
+  public void wordIsCreatedAndDisplayedTest() {
     goTo("http://localhost:4567/");
     click("a", withText("Add a New Word"));
     fill("#wordInput").with("Bird");
@@ -38,20 +38,10 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void wordIsDisplayedTest() {
-    goTo("http://localhost:4567/words/new");
-    fill("#wordInput").with("Bird");
-    submit(".btn");
-    click("a", withText("View All Words"));
-    assertThat(pageSource()).contains("Bird");
-  }
-
-  @Test
   public void wordDefinitionFormIsDisplayed() {
     goTo("http://localhost:4567/words/new");
     fill("#wordInput").with("Bird");
     submit(".btn");
-    click("a", withText("View All Words"));
     click("a", withText("Bird"));
     click("a", withText("Add a new definition"));
     assertThat(pageSource()).contains("Add a Definition to Bird");
