@@ -43,4 +43,15 @@ public class AppTest extends FluentTest {
     click("a", withText("View All Words"));
     assertThat(pageSource()).contains("Bird");
   }
+
+  @Test
+  public void wordDefinitionFormIsDisplayed() {
+    goTo("http://localhost:4567/words/new");
+    fill("#wordInput").with("Bird");
+    submit(".btn");
+    click("a", withText("View All Words"));
+    click("a", withText("Bird"));
+    click("a", withText("Add a new definition"));
+    assertThat(pageSource()).contains("Add a Definition to Bird");
+  }
 }

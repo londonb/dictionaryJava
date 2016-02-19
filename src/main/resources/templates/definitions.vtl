@@ -1,0 +1,9 @@
+<h1>definitions.vtl</h1>
+
+<h1> All definitions </h1>
+<ul>
+#foreach ($definition in $definitions)
+  <a href="/definitions/$definition.getId()">$definition.getDefinitionOfWord()</a>
+#end
+</ul>
+<a href="/definitions/new">Add Another Definition</a>
