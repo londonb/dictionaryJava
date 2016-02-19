@@ -37,4 +37,12 @@ public class WordTest {
     Word.clear();
     assertEquals(Word.all().size(), 0);
   }
+
+  @Test
+  public void addDefinitions_addsDefinitionsToWord() {
+    Word testWord = new Word("Bird");
+    Definition testDefinition = new Definition("An animal with wings");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+  }
 }

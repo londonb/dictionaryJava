@@ -19,6 +19,7 @@ public class Definition {
   public static ArrayList<Definition> all() {
     return instances;
   }
+  
 
   public int getId() {
   return mId;

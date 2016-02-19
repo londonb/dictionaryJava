@@ -5,11 +5,13 @@ public class Word {
   private static ArrayList<Word> instances = new ArrayList<Word>();
   private String mNameOfWord;
   private int mId;
+  private ArrayList<Definition> mDefinitions;
 
   public Word(String nameOfWord) {
     mNameOfWord = nameOfWord;
     instances.add(this);
     mId = instances.size();
+    mDefinitions = new ArrayList<Definition>();
   }
 
   public String getNameOfWord() {
@@ -31,6 +33,14 @@ public class Word {
       return null;
     }
   }
+
+  public ArrayList<Definition> getDefinitions() {
+    return mDefinitions;
+  }
+
+  public void addDefinition (Definition definition) {
+  mDefinitions.add(definition);
+}
 
   public static void clear() {
     instances.clear();
