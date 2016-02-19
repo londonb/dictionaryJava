@@ -30,4 +30,11 @@ public class DefinitionTest {
     Definition testDefinition = new Definition("A definition");
     assertEquals(Definition.all().size(), testDefinition.getId());
   }
+
+  @Test
+  public void find_returnsDefinitionWithSameId_secondTask() {
+    Definition firstDefinition = new Definition("A definition");
+    Definition secondDefinition = new Definition("Another definition");
+    assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
+  }
 }
